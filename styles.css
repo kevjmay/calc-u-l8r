@@ -1,4 +1,70 @@
-h1:hover {
-    color: aqua;
-    background-color: blueviolet;
+* {
+    background-color: #69a2a8;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25vh;
+}
+
+.body{
+    padding: 8px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    background-color: #f19474;
+}
+
+.screen, 
+.rowOne, 
+.rowTwo,
+.rowThree,
+.rowFour,
+.rowFive {
+    padding: 2px;
+    /* border: 1px solid black; */
+    background-color: #f19474;
+}
+.screen {
+    height: 60px;
+    width: 252px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #94919a;
+    margin-bottom: 6px;
+}
+
+.small {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    background-color: #ea777b;
+}
+
+.small:hover {
+    background-color: #ca393e;
+}
+
+.large {
+    height: 60px;
+    width: 124px;
+    border-radius: 8px;
+    background-color: #ea777b;
+}
+
+.large:hover {
+    background-color: #0c6210;
+}
+
+footer{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.fa-github {
+    color: black;
+    font-size: large;
 }
