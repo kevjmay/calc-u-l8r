@@ -34,6 +34,14 @@
     margin-bottom: 6px;
 }
 
+.screenText {
+    display: flex;
+    padding: 5px;
+    background-color: #94919a;
+    color: beige;
+    justify-content: flex-end;
+}
+
 .small {
     height: 60px;
     width: 60px;
