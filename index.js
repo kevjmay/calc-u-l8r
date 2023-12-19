@@ -1,7 +1,8 @@
 //Global variables
-let a = 2;
-let b = 3;
-let op = ''; 
+let a = 0;
+let b = 0;
+let op = '';
+
 
 //Initial operation functions
 function add(a, b) {
@@ -31,6 +32,18 @@ display.addEventListener('click', connected)
 
 function connected() {
     display.textContent = this.textContent
+
+    if (a === 0) {
+        a = this.textContent
+        console.log(`a is now set to ${a}`)
+    } else if (b === 0) {
+        b = this.textContent
+        console.log(`b is now set to ${b}`)
+    } else if (a != 0 && b != 0) {
+        a = 0
+        b = 0
+        console.log(`variables reset to start new calculation`)
+    }
 }
 
 //Links for the buttons
@@ -94,18 +107,19 @@ clearButton.addEventListener('click', clearFunc)
 // Delete and clear functions
 function deleteFunc() {
     display.textContent = '';
-    //This will need to be elaborated on when storing values in an array to pop off the last element.
+    if (a != 0 && b != 0) {
+        b = 0
+        console.log(`b is now: ${b}`)
+    } else {
+        a = 0
+        console.log(`a is now: ${a}`)
+    }
 }
 
 function clearFunc() {
     display.textContent = '';
-    //This will need to be elaborated on when storiing values in an array to empty the array.
+    a = 0
+    b = 0
+    answer = 0
+    console.log(`now cleared, a: ${a}, b: ${b}, and answer: ${answer}`)
 }
-
-
-console.log(operate(subtract(a,b)))
-
-console.log(add(a, b))
-console.log(subtract(a, b))
-console.log(multiply(a, b))
-console.log(divide(a, b))
