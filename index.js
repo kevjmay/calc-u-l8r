@@ -1,125 +1,289 @@
-//Global variables
-let a = 0;
-let b = 0;
-let op = '';
+ // Global variables updated by event handlers
 
+ let a = 0
+ let b = 0
+ let op = ''
+ let equation = []
+ let error = 'Hhhmmm oops! Try that again'
 
-//Initial operation functions
-function add(a, b) {
-    return a + b;
-}
+ // button links to equation and set global variables a, b
 
-function subtract(a, b) {
-    return a - b;
-}
+ let one = document.querySelector('.one')
+ one.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = one.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+     
+     if (a === 0) {
+         a = one.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = one.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
 
-function multiply(a, b) {
-    return a * b;
-}
+ let two = document.querySelector('.two')
+ two.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = two.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+     
+     if (a === 0) {
+         a = two.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = two.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
 
-function divide(a, b) {
-    return Math.round(a / b);
-}
+ let three = document.querySelector('.three')
+ three.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = three.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+     
+     if (a === 0) {
+         a = three.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = three.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
 
-//Operate function which can use the initial operation functions
-function operate(op) {
-    return op
-}
+ let four = document.querySelector('.four')
+ four.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = four.textContent
+     document.querySelector('.arrayScreen').textContent = equation
 
-//Link the screen via a display variable
-let display = document.querySelector('.screenText')
-display.addEventListener('click', connected)
+     if (a === 0) {
+         a = four.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = four.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
 
-function connected() {
-    display.textContent = this.textContent
+ let five = document.querySelector('.five')
+ five.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = five.textContent
+     document.querySelector('.arrayScreen').textContent = equation
 
-    if (a === 0) {
-        a = this.textContent
-        console.log(`a is now set to ${a}`)
-    } else if (b === 0) {
-        b = this.textContent
-        console.log(`b is now set to ${b}`)
-    } else if (a != 0 && b != 0) {
+     if (a === 0) {
+         a = five.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = five.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
+
+ let six = document.querySelector('.six')
+ six.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = six.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     if (a === 0) {
+         a = six.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = six.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
+
+ let seven = document.querySelector('.seven')
+ seven.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = seven.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     if (a === 0) {
+         a = seven.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = seven.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
+
+ let eight = document.querySelector('.eight')
+ eight.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = eight.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     if (a === 0) {
+         a = eight.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = eight.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
+
+ let nine = document.querySelector('.nine')
+ nine.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = nine.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     if (a === 0) {
+         a = nine.textContent
+         equation.push(a)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     } else if (b === 0) {
+         b = nine.textContent
+         equation.push(b)
+         document.querySelector('.arrayScreen').textContent = equation.join(' ')
+         console.log(equation)
+     }
+ })
+
+ //operation links to equation and update op global variable
+ let add = document.querySelector('.addition')
+ add.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = add.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     op = add.textContent
+     equation.push(op)
+     document.querySelector('.arrayScreen').textContent = equation.join(' ')
+     console.log(equation)
+
+ })
+
+ let subtract = document.querySelector('.subtract')
+ subtract.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = subtract.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     op = subtract.textContent
+     equation.push(op)
+     document.querySelector('.arrayScreen').textContent = equation.join(' ')
+     console.log(equation)
+
+ })
+
+ let multiply = document.querySelector('.multiply')
+ multiply.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = multiply.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     op = multiply.textContent
+     equation.push(op)
+     document.querySelector('.arrayScreen').textContent = equation.join(' ')
+     console.log(equation)
+
+ })
+
+ let division = document.querySelector('.division')
+ division.addEventListener('click', function() {
+     document.querySelector('.screen').textContent = division.textContent
+     document.querySelector('.arrayScreen').textContent = equation
+
+     op = division.textContent
+     equation.push(op)
+     document.querySelector('.arrayScreen').textContent = equation.join(' ')
+     console.log(equation)
+
+ })
+
+ // The operate function - based on global variables op it will decide which operation to run with variables a, b
+ let equals = document.querySelector('.equals')
+ equals.addEventListener('click', function() {
+     
+     // Extract the values from the equation array
+     let first = Number(equation[0]);
+     let operation = equation[1];
+     let second = Number(equation[2]);
+
+     // Perform the addition based on the operation
+     let result;
+     if (operation === '+') {
+         result = first + second;
+     } else if (operation === '-') {
+         result = first - second;
+     } else if (operation === '*') {
+        result = first * second;
+     } else if (operation === '/') {
+        result = Math.round(first / second)
+     }
+
+     document.querySelector('.screen').textContent = result;
+     document.querySelector('.arrayScreen').textContent = equation.join(' ');
+
+     // Reset the variables for the next calculation
+     a = 0;
+     b = 0;
+     op = '';
+     equation = [];
+ }); 
+
+ // AC and DEL buttons which change the equation and global variable assignment
+ let clearButton = document.querySelector('.clearButton')
+ clearButton.addEventListener('click', function() {
+    console.log('clear button clicked')
+    console.log(`These are the variables, a:${a} and b:${b}. Op is set to:${op}`)
+
+    if (a != 0 || b != 0 || op != '') {
         a = 0
         b = 0
-        console.log(`variables reset to start new calculation`)
-    }
-}
-
-//Links for the buttons
-let one = document.querySelector('#one')
-one.addEventListener('click', connected)
-
-let two = document.querySelector('#two')
-two.addEventListener('click', connected)
-
-let three = document.querySelector('#three')
-three.addEventListener('click', connected)
-
-let four = document.querySelector('#four')
-four.addEventListener('click', connected)
-
-let five = document.querySelector('#five')
-five.addEventListener('click', connected)
-
-let six = document.querySelector('#six')
-six.addEventListener('click', connected)
-
-let seven = document.querySelector('#seven')
-seven.addEventListener('click', connected)
-
-let eight = document.querySelector('#eight')
-eight.addEventListener('click', connected)
-
-let nine = document.querySelector('#nine')
-nine.addEventListener('click', connected)
-
-let zero = document.querySelector('#zero')
-zero.addEventListener('click', connected)
-
-let period = document.querySelector('#period')
-period.addEventListener('click', connected)
-
-let equals = document.querySelector('#equals')
-equals.addEventListener('click', connected)
-
-let subtraction = document.querySelector('#subtraction')
-subtraction.addEventListener('click', connected)
-
-let addition = document.querySelector('#addition')
-addition.addEventListener('click', connected)
-
-let multiplication = document.querySelector('#multiplication')
-multiplication.addEventListener('click', connected)
-
-let modButton = document.querySelector('#modButton')
-modButton.addEventListener('click', connected)
-
-let division  = document.querySelector('#division')
-division.addEventListener('click', connected)
-
-let deleteButton = document.querySelector('#deleteButton')
-deleteButton.addEventListener('click', deleteFunc)
-
-let clearButton = document.querySelector('#clearButton')
-clearButton.addEventListener('click', clearFunc)
-
-// Delete and clear functions
-function deleteFunc() {
-    display.textContent = '';
-    if (a != 0 && b != 0) {
-        b = 0
-        console.log(`b is now: ${b}`)
+        op = ''
     } else {
-        a = 0
-        console.log(`a is now: ${a}`)
+        a = 0;
+        b = 0;
+        op = '';
+        equation = [];
     }
-}
+    document.querySelector('.screen').textContent = a;
+    document.querySelector('.arrayScreen').textContent = error.textContent;
+    console.log(`These are the variables, a:${a} and b:${b}. Op is set to:${op}`)
+ })
 
-function clearFunc() {
-    display.textContent = '';
-    a = 0
-    b = 0
-    answer = 0
-    console.log(`now cleared, a: ${a}, b: ${b}, and answer: ${answer}`)
-}
+ let deleteButton = document.querySelector('.deleteButton')
+ deleteButton.addEventListener('click', function() {
+    if (b != 0) {
+        b = 0
+        equation.pop()
+        document.querySelector('.arrayScreen').textContent = equation.join(' ');
+    } else if (op != '') {
+        op = ''
+        equation.pop()
+        document.querySelector('.arrayScreen').textContent = equation.join(' ');
+    } else if (a != 0) {
+        a = 0
+        equation.pop()
+        document.querySelector('.arrayScreen').textContent = equation.join(' ');
+    } 
+ })
